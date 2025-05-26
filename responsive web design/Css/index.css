@@ -1,0 +1,489 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'font-base';
+    src: url(../fonts/Chillax-Variable.ttf);
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url(../fonts/Satoshi-Variable.ttf);
+}
+
+@keyframes blinker {
+    0%,50% {
+        color: transparent;
+    }
+
+    51%,100% {
+        color: white;
+    }
+}
+
+.blinker {
+    animation: blinker .6s ease infinite;
+}
+
+@keyframes words {
+    0% {
+        content: "web developer?";
+    }
+
+    50% {
+        content: "web designer?";
+    }
+
+    80%,100% {
+        content: "software developer?";
+    }
+}
+
+
+body {
+    background: url(../Images/pexels-adrien-olichon-1257089-2387793.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.current {
+    color: white;
+    background-color: rgb(113, 185, 248);
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+    padding: 0 .5em;
+    font-family: 'Satoshi', 'sans serif';
+}
+
+h3 {
+    font-family: 'Satoshi', 'sans serif';
+    font-size: 1.4rem;
+    padding: 0 .5em;
+    margin: 0;
+}
+
+#welcome-txt {
+    font-family: 'font-base', 'sans serif';
+    color: white;
+    font-weight: 550;
+    font-size: 1.8rem;
+    margin: 6rem 2rem 0;
+}
+
+em {
+    font-size: 1.3em;
+}
+
+b {
+    margin: 0;
+    font-weight: 550;
+}
+
+b::after {
+    content: "";
+    color: rgb(131, 190, 242);
+    animation: words 15s ease-in infinite;
+}
+
+#msg {
+    font-size: .9rem;
+    font-family: 'Satoshi', 'sans serif';
+    color: rgba(255, 255, 255, 0.543);
+    margin: .4rem 2rem 0;
+}
+
+button {
+    color: rgba(0, 0, 0, 0.797);
+    background-color: rgb(187, 218, 246);
+    border: none;
+    border-radius: 7rem;
+    font-size: .73rem;
+    font-weight: 600;
+    width: 12rem;
+    height: 40px;
+    margin: .8rem 1.6rem 0;
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(131, 190, 242);
+    transform: scale(1.1);
+
+    transition: all .3s ease;
+}
+
+.overall-container {
+    display: flex;
+    background-color: rgba(173, 210, 243, 0.092);
+    width: 70%;
+    height: 80%;
+    border-radius: 25px;
+    backdrop-filter: blur(1em);
+    border: 4px solid rgba(255, 255, 255, 0.352);
+}
+
+#nav {
+    overflow: hidden;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+li {
+    color: black;
+    font-family: 'Satoshi', 'sans serif';
+    font-size: .8em;
+    text-align: center;
+    background-color: aliceblue;
+    margin: 0 5px;
+    padding: 10px 2.2em;
+    border-radius: 20px;
+}
+
+li:hover {
+    color: white;
+    background-color: rgb(113, 185, 248);
+    transform: scale(1.1);
+
+    transition: all .3s ease;
+}
+
+#btn2 {
+    font-family: 'Satoshi', 'sans serif';
+    font-size: 1rem;
+    margin: .7em;
+    padding: .6em 1.4em;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+#btn2:hover {
+    scale: 1.15;
+
+    transition: all .3s ease;
+}
+
+.sections {
+    width: 50%;
+    height: 100%;
+}
+
+.icons-tray {
+    padding: 0 1rem 0;
+    display: flex;
+    align-items: center;
+    margin: 0 0 .4rem;
+    position: absolute;
+    bottom: 0;
+    /* background-color: rgba(0, 255, 255, 0.173); */
+    width: 50%;
+    height: 10%;
+    border-bottom-left-radius: 25px;
+}
+
+.icons {
+    margin: 0 .6rem -1rem;
+    width: 25px;
+}
+
+.icons:hover {
+    scale: 1.35;
+
+    transition: all .3s ease;
+}
+
+#main-section2 {
+    position: relative;
+    margin: .5em 0;
+    height: 98%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer {
+    width: 100%;
+    height: 20rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 0 .7rem;
+}
+
+.footer-inner-sections {
+    font-family: var(--font-base);
+    font-size: large;
+    font-weight: 550;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.064);
+    height: 95%;
+    width: 47%;
+    border-radius: 25px;
+    backdrop-filter: blur(.5rem);
+}
+
+.footer-inner-head {
+    color: rgba(255, 255, 255, 0.836);
+    font-family: 'Satoshi', 'sans serif';
+    font-size: 1rem;
+    padding: 0 .5em;
+}
+
+video {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+/* Mobile: up to 480px */
+@media (max-width: 480px) {
+    .overall-container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        margin: 3em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin: .5rem 0;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .sections {
+        width: 100%;
+        height: auto;
+    }
+
+    #msg {
+        font-size: .8rem;
+        margin: .5rem 1rem 0;
+    }
+
+    #welcome-txt {
+        text-align: left;
+        font-size: 1.2rem;
+        margin: 1rem 1rem;
+    }
+
+    button {
+        width: 80%;
+        height: 35px;
+        font-size: .8rem;
+    }
+
+    #btn2 {
+        font-size: .8rem;
+    }
+
+    li {
+        font-size: .7rem;
+        padding: 10px 1.2em;
+    }
+
+    #footer {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .footer-inner-head {
+        font-size: .8rem;
+    }
+
+    .footer-inner-sections {
+        width: 90%;
+    }
+}
+
+/* Tablet: 481px to 768px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .overall-container {
+        flex-direction: column;
+        width: 95%;
+        /* height: auto; */
+        /* padding: 1rem 0; */
+    }
+
+    .sections {
+        width: 100%;
+        height: auto;
+    }
+
+    #welcome-txt {
+        font-size: 1.7rem;
+        margin: 3rem 1.5rem 1rem;
+        text-align: center;
+    }
+
+    #msg {
+        margin: 1rem 1.5rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    button {
+        width: 70%;
+        height: 45px;
+        font-size: 1rem;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    ul {
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 12px 10;
+        font-size: 0.90rem;
+        background-color: aliceblue;
+    }
+
+    #btn2 {
+        margin-top: 0.5rem 0;
+        padding: 0.6em 1.4em;
+        font-size: 1rem;
+    }
+
+    #footer {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-inner-sections {
+        width: 90%;
+        padding: 1rem 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+/* Laptop: 769px to 1024px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .overall-container {
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin: .9rem 0;
+    }
+
+    #welcome-txt {
+        font-size: 1.2rem;
+        margin: 3rem 1.5rem 1rem;
+    }
+
+    #msg {
+        margin: 1rem 1.5rem;
+        padding: .1rem 0;
+        font-size: .8rem;
+        
+    }
+
+    #nav {
+        padding: .6rem 0rem;
+        gap: 1rem;
+    }
+
+    ul {
+        margin: 0 .5rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    li {
+        font-size: .75rem;
+    }
+
+    #btn2 {
+        position: relative;
+        top: -80px;
+        margin: .5rem;
+    }
+
+    .sections {
+        width: 50%;
+        height: auto;
+    }
+
+    #footer {
+        height: auto;
+    }
+
+    .footer-inner-sections {
+        width: 45%;
+    }
+
+    .footer-inner-head {
+        text-align: left;
+        font-size: .8rem;
+    }
+
+    button {
+        font-size: .7rem;
+        margin: 0 1.5rem;
+    }
+
+}
